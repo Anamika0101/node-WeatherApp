@@ -10,7 +10,7 @@ const foreCast=(lat,long,callback)=>{
             callback("Unable to find location.Try other location.", undefined)
         }
         else{
-            callback(undefined,(body.daily[0].weather[0].description).toUpperCase()+". It is currently "+ (body.current.temp ) +" degrees out. There is a "+body.daily[0].pop+"% chance of rain.")
+            callback(undefined,(body.daily[0].weather[0].description).toUpperCase()+". It is currently "+ (body.current.temp ) +" degrees out. High today is "+body.daily[0].temp.max+" degrees while low is "+body.daily[0].temp.min+" degrees. There is a "+body.daily[0].pop+"% chance of rain.")
         }
     })
 }
